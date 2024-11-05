@@ -6,12 +6,12 @@ public class JobOfferCreatedEvent {
     private String jobOfferId;
     private String title;
     private String description;
-    private BigDecimal salary;
+    private Double salary;
 
     public JobOfferCreatedEvent() {
     }
 
-    public JobOfferCreatedEvent(String jobOfferId, String title, String description, BigDecimal salary) {
+    public JobOfferCreatedEvent(String jobOfferId, String title, String description, Double salary) {
         this.jobOfferId = jobOfferId;
         this.title = title;
         this.description = description;
@@ -42,11 +42,11 @@ public class JobOfferCreatedEvent {
         this.description = description;
     }
 
-    public BigDecimal getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(BigDecimal salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 }
