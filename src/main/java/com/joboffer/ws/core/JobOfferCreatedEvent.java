@@ -2,36 +2,56 @@ package com.joboffer.ws.core;
 
 import java.math.BigDecimal;
 
+
 public class JobOfferCreatedEvent {
-    private String jobOfferId;
-    private String title;
+
+
+    private String id ;
+
+    private String name;
+
+    private String skills; // Stored as JSON array
+
     private String description;
+
+    private String email;
+
     private Double salary;
 
     public JobOfferCreatedEvent() {
     }
 
-    public JobOfferCreatedEvent(String jobOfferId, String title, String description, Double salary) {
-        this.jobOfferId = jobOfferId;
-        this.title = title;
+    public JobOfferCreatedEvent(String id, String name, String skills, String description, String email, Double salary) {
+        this.id = id;
+        this.name = name;
+        this.skills = skills;
         this.description = description;
+        this.email = email;
         this.salary = salary;
     }
 
-    public String getJobOfferId() {
-        return jobOfferId;
+    public String getId() {
+        return id;
     }
 
-    public void setJobOfferId(String jobOfferId) {
-        this.jobOfferId = jobOfferId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSkills() {
+        return skills;
+    }
+
+    public void setSkills(String skills) {
+        this.skills = skills;
     }
 
     public String getDescription() {
@@ -40,6 +60,14 @@ public class JobOfferCreatedEvent {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Double getSalary() {
