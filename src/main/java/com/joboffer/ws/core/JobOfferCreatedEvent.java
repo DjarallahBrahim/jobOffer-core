@@ -1,27 +1,21 @@
 package com.joboffer.ws.core;
 
-import java.math.BigDecimal;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.List;
 
 public class JobOfferCreatedEvent {
 
-
-    private String id ;
-
+    private String id;
     private String name;
-
-    private String skills; // Stored as JSON array
-
+    private List<String> skills; // Stored as a List of Strings
     private String description;
-
     private String email;
-
     private Double salary;
 
     public JobOfferCreatedEvent() {
     }
 
-    public JobOfferCreatedEvent(String id, String name, String skills, String description, String email, Double salary) {
+    public JobOfferCreatedEvent(String id, String name, List<String> skills, String description, String email, Double salary) {
         this.id = id;
         this.name = name;
         this.skills = skills;
@@ -46,11 +40,11 @@ public class JobOfferCreatedEvent {
         this.name = name;
     }
 
-    public String getSkills() {
+    public List<String> getSkills() {
         return skills;
     }
 
-    public void setSkills(String skills) {
+    public void setSkills(List<String> skills) {
         this.skills = skills;
     }
 
